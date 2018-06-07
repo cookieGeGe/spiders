@@ -9,7 +9,7 @@ import pymongo
 
 class BiqugePipeline(object):
     def __init__(self):
-        self.mongo_cli = pymongo.MongoClient(host='47.106.81.203', port=27017)
+        self.mongo_cli = pymongo.MongoClient(host='x.x.x.x', port=xxxxx)
 
     def process_item(self, item, spider):
         db = self.mongo_cli.bqg
