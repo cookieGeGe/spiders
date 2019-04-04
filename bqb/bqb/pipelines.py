@@ -12,14 +12,15 @@ class BqbPipeline(object):
 
     def process_item(self, item, spider):
         dir_name = dict(item)['title']
-        if not os.path.exists("E:\\images\\" + dir_name):
-            os.mkdir("E:\\images\\" + dir_name)
+        if not os.path.exists("D:\\images\\" + dir_name):
+            os.mkdir("D:\\images\\" + dir_name)
         data = dict(item)['data']
         for pic in data:
             pic_url = data[pic]
+            print(pic_url)
             print(pic_url.rfind('/'))
             name = pic_url[pic_url.rfind('/') + 1:]
-            filename = "E:\\images\\" + dir_name + "\\" + name
+            filename = "D:\\images\\" + dir_name + "\\" + name
 
             try:
                 with open(filename, 'wb') as f:
